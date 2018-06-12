@@ -1,0 +1,26 @@
+
+  temp-form works!
+
+  <form #myForm="ngForm" [ngFormOptions]="{updateOn:'blur'}">
+
+ 
+      <label>
+        Username:
+      </label>
+        <input type="text" name="userId" #userId="ngModel" [(ngModel)]="username" minlength="5">
+     
+      <div *ngIf="!userId.valid" class="alert alert-danger">
+        User Name Madatory
+      </div>
+      <br>
+      <label>
+        Password:
+      </label>
+      <input type="text" name="pass1" #pass1="ngModel" [(ngModel)]="password" minlength="8">
+      <div>
+        <input type = "submit" class ="btn btn-success">
+      </div>
+
+  </form>
+
+
